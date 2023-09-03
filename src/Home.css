@@ -1,0 +1,36 @@
+.navbar {
+    background-color: #007bff;
+    color: white;
+    align-items: center; /* Alinea verticalmente el contenido al centro */
+    padding: 10px 20px;
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .create-profile-button {
+    margin-right: auto; /* Empuja el botón hacia la derecha del todo */
+    display : flex;
+  }
+  
+  .create-profile-button button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-profile-button button:hover {
+    background-color: #218838;
+  }
+  

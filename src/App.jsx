@@ -1,20 +1,17 @@
-import { Link } from 'react-router-dom' 
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-
-function App() {
+const App= () => {
   return (
-    <Card className="cardd">
-      <Card.Body>
-        <Card.Title>Mensaje Para Pereira</Card.Title>
-        <Card.Text>
-           un mensajito para Peralta
-        </Card.Text>
-       <Button variant="primary" ><Link  to={"/Mensaje"}>Mostar</Link></Button> 
-      </Card.Body>
-    </Card>
+    <div className="App">
+      <div className="centered-content">
+        <h1>Bienvenido</h1>
+        <Link to="/Formulario">
+        <button>Comenzar formulario</button>
+      </Link>
+      </div>
+    </div>
   );
-}
+};
 
 export default App
