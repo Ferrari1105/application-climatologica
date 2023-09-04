@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './Formulario.css';
-import { Form, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 function Formulario() {
   const [formData, setFormData] = useState({
     nombre: '',
     edad: '',
     email: '',
-    genero: '',
+    genero: '', // Cambiamos el valor por defecto a una cadena vacía
     comentarios: '',
   });
 
@@ -61,37 +62,26 @@ function Formulario() {
             required
           />
         </div>
-        <div className="form-group">
-          <label>Género:</label>
-          <input
-            type="radio"
-            id="masculino"
+
+        <div className="form-group sexo">
+          <label htmlFor="genero">Género:</label>
+          <select
+            id="genero"
             name="genero"
-            value="Masculino"
+            value={formData.genero}
             onChange={handleChange}
-          />
-          <label htmlFor="masculino">Masculino</label>
-          <input
-            type="radio"
-            id="femenino"
-            name="genero"
-            value="Femenino"
-            onChange={handleChange}
-          />
-          <label htmlFor="femenino">Femenino</label>
-          <input
-            type="radio"
-            id="otro"
-            name="genero"
-            value="Otro"
-            onChange={handleChange}
-          />
-          <label htmlFor="otro">Otro</label>
+            required
+          >
+            <option value="">Selecciona tu género</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+            <option value="Otro">Otro</option>
+          </select>
         </div>
 
         <Link to="/Preguntas">
-        <button type='submit'>Siguiente</button>
-      </Link>
+          <button type="submit">Siguiente</button>
+        </Link>
       </form>
     </div>
   );

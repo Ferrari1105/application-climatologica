@@ -1,14 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Perfil.css'
+import './Perfil.css';
+import Navbar from '../Components/Navbar';
+
 function Perfil() {
   return (
-    <div>
-      <h1>Página de Perfil</h1>
-      <p>Aquí puedes mostrar la información del perfil del usuario.</p>
-      <Link to="/Home">
-        <button>Volver a la Home</button>
-      </Link>
+    <div className="Home">
+      <Navbar />
+      <div className="content">
+        {/* Tu contenido de la página de inicio va aquí */}
+        <h1>Perfil</h1>
+      </div>
     </div>
   );
 }

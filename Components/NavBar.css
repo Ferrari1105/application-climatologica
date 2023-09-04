@@ -1,0 +1,50 @@
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: rgb(119, 170, 119, .9);
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Espacio entre elementos en los extremos */
+    align-items: center; /* Alinea verticalmente el contenido al centro */
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .3);
+    gap: 10px;
+  }
+  
+  /* Estilo para el logotipo en el centro */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  
+  .create-profile-button button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0;
+  }
+  .donar{
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .create-profile-button button:hover {
+    background-color: #218838;
+  }
+  
+
+  .profile-button{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .create-profile-button{
+    margin: 0;
+  }

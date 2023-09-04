@@ -1,12 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './index.css'
 import { createBrowserRouter, RouterProvider} from 'react-router-dom' 
 import Home from './Home.jsx'
 import Formulario from './Formulario.jsx'
 import Perfil from './Perfil.jsx';
 import Preguntas from './Preguntas.jsx';
+import Donar from  './Donar.jsx'
+import Navbar from '../Components/Navbar.jsx'
 const routes = createBrowserRouter([{
   path: "/",
   element: <App />
@@ -22,6 +23,9 @@ const routes = createBrowserRouter([{
 },{
   path: "/Preguntas",
   element: <Preguntas/>
+},{
+  path: "/Donar",
+  element: <Donar/>
 }])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
