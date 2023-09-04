@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Formulario.css';
-import { Form, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Preguntas() {
   const [formData, setFormData] = useState({
@@ -9,13 +9,18 @@ function Preguntas() {
     email: '',
     genero: '',
     comentarios: '',
+    pregunta1: false,
+    pregunta2: false,
+    pregunta3: false,
+    pregunta4: '',
+    pregunta5: '',
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value, type, checked } = e.target;
     setFormData({
       ...formData,
-      [name]: value,
+      [name]: type === 'checkbox' ? checked : value,
     });
   };
 
@@ -30,69 +35,56 @@ function Preguntas() {
       <h1>Formulario Interactivo</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="nombre">Nombre:</label>
+          <label htmlFor="pregunta1">¿Reciclas regularmente tus desechos, como papel, cartón y plástico?</label>
           <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            value={formData.nombre}
+            type="checkbox"
+            id="pregunta1"
+            name="pregunta1"
+            checked={formData.pregunta1}
             onChange={handleChange}
-            required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="edad">Edad:</label>
+          <label htmlFor="pregunta2">¿Utilizas el transporte público o compartes vehículos para reducir la emisión de gases de efecto invernadero?</label>
           <input
-            type="number"
-            id="edad"
-            name="edad"
-            value={formData.edad}
+            type="checkbox"
+            id="pregunta2"
+            name="pregunta2"
+            checked={formData.pregunta2}
             onChange={handleChange}
-            required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="email">Correo Electrónico:</label>
+          <label htmlFor="pregunta3">¿Has reemplazado algunas de tus bombillas incandescentes por luces LED o CFL de mayor eficiencia energética?</label>
           <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
+            type="checkbox"
+            id="pregunta3"
+            name="pregunta3"
+            checked={formData.pregunta3}
             onChange={handleChange}
-            required
           />
         </div>
         <div className="form-group">
-          <label>Género:</label>
-          <input
-            type="radio"
-            id="masculino"
-            name="genero"
-            value="Masculino"
+          <label htmlFor="pregunta4">¿Qué medidas has tomado en tu vida diaria para reducir tu consumo de energía y, por lo tanto, tu huella de carbono?</label>
+          <textarea
+            id="pregunta4"
+            name="pregunta4"
+            value={formData.pregunta4}
             onChange={handleChange}
           />
-          <label htmlFor="masculino">Masculino</label>
-          <input
-            type="radio"
-            id="femenino"
-            name="genero"
-            value="Femenino"
-            onChange={handleChange}
-          />
-          <label htmlFor="femenino">Femenino</label>
-          <input
-            type="radio"
-            id="otro"
-            name="genero"
-            value="Otro"
-            onChange={handleChange}
-          />
-          <label htmlFor="otro">Otro</label>
         </div>
-
+        <div className="form-group">
+          <label htmlFor="pregunta5">¿Has considerado cambiar tu dieta o reducir el consumo de carne y productos lácteos para disminuir la huella de carbono asociada a la producción de alimentos?</label>
+          <textarea
+            id="pregunta5"
+            name="pregunta5"
+            value={formData.pregunta5}
+            onChange={handleChange}
+          />
+        </div>
         <Link to="/Home">
-        <button type='submit'>Siguiente</button>
-      </Link>
+          <button type='submit'>Siguiente</button>
+        </Link>
       </form>
     </div>
   );
