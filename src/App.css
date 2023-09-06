@@ -1,46 +1,66 @@
-/* Estilo para centrar el contenido en el medio de la pantalla */
-.App {
-  background-color: #77aa77;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2377aa77'/%3E%3Cstop offset='1' stop-color='%234fd'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg %3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");
-  background-attachment: fixed;
-  background-size: cover;
-  display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  height: 90vh; /* Esto asegura que ocupe el 100% de la altura de la ventana */
+img{
+  width: 50rem;
+  padding-bottom: 2%;
 }
 
-/* Estilo para el título */
-.texto h1 {
-  color: black; 
-  font-size: 100px; /* Tamaño de fuente para el título */
+@font-face{
+font-family: 'spicyNoodle';
+src: local('spicyNoodle'), url(../assets/fonts/spicy_noodle/SpicyNoodle.otf) format('opentype');
 }
 
-/* Estilo para el botón */
-.texto button {
-  font-size: 30px;
-  background-color: #007bff; /* Cambia el color de fondo del botón a azul */
-  color: white; /* Cambia el color del texto a blanco */
-  border: none; /* Quita el borde del botón */
-  padding: 10px 20px; /* Añade relleno al botón */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  border-radius: 20px; /* Establece las esquinas del botón como redondeadas */
+.posicionarMapa{
+display: flex;
+align-content: center;
+justify-content: center;
 }
 
-.texto button:hover {
-  background-color: #0056b3; /* Cambia el color de fondo cuando pasas el cursor sobre el botón */
+.titulo {
+display: flex;
+justify-content: center;
+font-family: spicyNoodle;
+font-size: 5rem;
+color: #61C65D;
 }
 
-a:link, a:visited, a:active {
-  text-decoration:none;
+.texto{
+font-size: 1.5rem;
+margin: 1rem;
+}
+
+.cuadro{
+background-color: rgba(71, 71, 71, 0.54);
+color: aliceblue;
+word-wrap: break-word;  border-style: dashed; 
+}
+
+.cuadroDos{
+word-wrap: break-word;  border-style:double;
+background-color: rgba(71, 71, 71, 0.54);
+padding: 2rem;
+color: aliceblue;
+}
+
+.centrardeHome {
+margin-left: 20%;
+margin-right: 20%;
+margin-top: 5rem;
 }
 .boton{
   display: flex;
-  align-items: center;
   justify-content: center;
-  
+  text-decoration: none;
+  margin: 1rem;
+}
+.centrarJust{
+display: flex;
+justify-content: center;
 }
 
-.texto button:hover {
-  background-color: #0056b3; /* Cambia el color de fondo cuando pasas el cursor sobre el botón */
+.margen{
+margin: 8rem;
+margin-top: 2rem;
+}
+
+.margenDos{
+margin: 2rem;
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Formulario.css';
 import { Link } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap'; // Importa los componentes de React Bootstrap
-
+import Navbar from '../Components/Navbar.jsx'
 function Formulario() {
   const [formData, setFormData] = useState({
     nombre: '',
@@ -27,27 +27,31 @@ function Formulario() {
   };
 
   return (
+<>
+      <Navbar className="fixed-top"/>
     <div className='form-container'>
 <div className="Formulario">
+      <div className='tituloForm'>
       <h1>Formulario Interactivo</h1>
+      </div>
       <Form>
       <Form.Group className="mb-3">
-        <Form.Label>Nombre</Form.Label>
+        <Form.Label>Nombre:</Form.Label>
         <Form.Control type="text" placeholder="Nombre" />
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Apellido</Form.Label>
+        <Form.Label>Apellido:</Form.Label>
         <Form.Control type="text" placeholder="Apellido" />
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Email</Form.Label>
+        <Form.Label>Email:</Form.Label>
         <Form.Control type="text" placeholder="Email" />
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Contraseña</Form.Label>
+        <Form.Label>Contraseña:</Form.Label>
         <Form.Control type="password" placeholder="Contraseña" />
       </Form.Group>
 
@@ -57,6 +61,7 @@ function Formulario() {
     </Form>
     </div>
     </div>
+</>
   );
 }
 

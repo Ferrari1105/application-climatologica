@@ -1,12 +1,73 @@
-.Formulario{
+.form-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  
 }
 
-.Formulario > input[type="check"]{
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+
+.Formulario {
+  text-align: center;
+  font-family: Arial, sans-serif; 
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  border-radius: 20px;
+  background-color: #28a745;
+  width: fit-content;
+  width: 35%;
+  margin-top: 1px;
 }
+
+.Formulario> * {
+  min-width: 350px;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://denomades.imgix.net/destinos/puerto-iguazu/1141/catarats-de-iguazu-argentina.jpg');
+    background-attachment: fixed;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 25px;
+  color: white;
+  padding: 10px;
+}
+
+
+  .textareaForm {
+     width: 500px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  .tituloForm{
+    padding-bottom: 10px;
+    color: white;
+  }
+  button[type="submit"] {
+    background-color:black;
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }

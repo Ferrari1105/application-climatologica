@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import './Formulario.css';
+import './Preguntas.css';
 import { Link } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap'; // Importa los componentes de React Bootstrap
+import Navbar from '../Components/Navbar.jsx'
 
 function Preguntas() {
   const [formData, setFormData] = useState({
@@ -32,9 +33,13 @@ function Preguntas() {
   };
 
   return (
+    <>
+    <Navbar className="fixed-top"/>
     <div className='form-container'>
     <div className="Formulario">
+      <div className='tituloForm'>
           <h1>Formulario Interactivo</h1>
+      </div>
           <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3">
             <Form.Label>¿Reciclas regularmente tus desechos, como papel, cartón y plástico?</Form.Label>
@@ -62,9 +67,11 @@ function Preguntas() {
             checked={formData.pregunta3}
             onChange={handleChange} />
           </Form.Group>
-          <Form.Group className="mb-3">
+          <Form.Group className="mb-3 ">
             <Form.Label>¿Qué medidas has tomado en tu vida diaria para reducir tu consumo de energía y, por lo tanto, tu huella de carbono?</Form.Label>
             <Form.Control as="textarea"
+            className='textareaForm'
+            placeholder="..."
             id="pregunta4"
             name="pregunta4"
             value={formData.pregunta4}
@@ -77,6 +84,7 @@ function Preguntas() {
         </Form>
         </div>
         </div>
+            </>
   );
 }
 

@@ -1,23 +1,26 @@
 .form-container {
   display: flex;
   justify-content: center;
-  margin: 1rem;
+  align-items: center;
+  margin: 2rem;
+  
 }
 
 
 .Formulario {
   text-align: center;
-  /* font-family: Arial, sans-serif; */
-  padding: 20px;
+  font-family: Arial, sans-serif; 
+  padding: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, .3);
+  border-radius: 20px;
+  background-color: #28a745;
   width: fit-content;
-
+  width: 35%;
+  margin-top: 4%;
 }
 
 .Formulario> * {
@@ -25,10 +28,11 @@
 }
 
 body {
-  background-color: #77aa77;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2377aa77'/%3E%3Cstop offset='1' stop-color='%234fd'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg %3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");
-  background-attachment: fixed;
-  background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://denomades.imgix.net/destinos/puerto-iguazu/1141/catarats-de-iguazu-argentina.jpg');
+    background-attachment: fixed;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* .sexo{
@@ -49,41 +53,39 @@ label {
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
+  font-size: 30px;
+  color: white;
+  padding: 10px;
 }
 
-/* input[type="text"],
+ input[type="text"],
   input[type="email"],
   input[type="number"],
+  input[type="password"],
   textarea {
-    width: 300px;
-    height: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+     font-size: 20px;
+     padding: 10px;
+     width: 500px;
   }
   
   input[type="radio"] {
     margin-right: 5px;
   }
-  
+  .tituloForm{
+    padding-bottom: 10px;
+    color: white;
+  }
   button[type="submit"] {
-    background-color: #007BFF;
+    background-color:black;
     color: #fff;
+    font-size: 30px;
     padding: 10px 20px;
     border: none;
-    border-radius: 3px;
+    border-radius: 20px;
     cursor: pointer;
+    margin-top: 20px;
   }
   
   button[type="submit"]:hover {
     background-color: #0056b3;
   }
-
-
-  */
-.usuario-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}

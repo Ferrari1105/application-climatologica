@@ -7,7 +7,7 @@ import Formulario from './Formulario.jsx'
 import Perfil from './Perfil.jsx';
 import Preguntas from './Preguntas.jsx';
 import Donar from  './Donar.jsx'
-import Navbar from '../Components/Navbar.jsx'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
 
@@ -33,6 +33,7 @@ const routes = createBrowserRouter([{
 }])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  
   <React.StrictMode>
     <RouterProvider router={routes}/>
   </React.StrictMode>,
