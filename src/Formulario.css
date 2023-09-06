@@ -27,13 +27,7 @@
   min-width: 350px;
 }
 
-body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://denomades.imgix.net/destinos/puerto-iguazu/1141/catarats-de-iguazu-argentina.jpg');
-    background-attachment: fixed;
-    background-blend-mode: darken;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 
 /* .sexo{
     font-size: 20px;

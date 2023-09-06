@@ -6,23 +6,21 @@ h1{
     margin:0;
   }
  
-  .content{
-    padding: 1rem;
-    
-  }
   .fotoDePerfil{
     width: 15% !important;
     height: 15%;
     background-size: cover;
     background-position: center;
     padding: 10px;
-    border-radius: 30%;
-    margin-left: 400px;
+    border-radius: 1%;
+    margin-left: 100px;
     flex: none !important;
   }
   .bannerPerfil{
     background-color: rgba(0, 128, 0, 0.7);
     width: none !important;
+    display: flex;
+    grid-row: auto;
   }
   .cardsPerfil{
     justify-content: space-around;

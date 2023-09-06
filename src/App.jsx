@@ -13,8 +13,8 @@ const App = () => {
                     <p className='texto'>El medioambiente es el espacio en el que se desarrolla la vida de los distintos organismos favoreciendo su interacción.</p>
                     <p className='texto'>La idea de la pagina es incentivar a los usuarios a mejorar su habitos que afecten al medio ambiente</p>
                 </div>
-                <Link to="/Formulario" className='boton'>
-                 <button>Comenzar formulario</button>
+                <Link to="/Formulario" className='boton' >
+                 <button className='boton'>Comenzar formulario</button>
                 </Link>
             </div>
         </>

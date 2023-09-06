@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="create-profile-button">
-        <Link to="/Donar" className='Donar'>
+        <Link to="/Donar" className='DONAR'>
           <button className='donar'>Donar</button>
         </Link>
       </div>
