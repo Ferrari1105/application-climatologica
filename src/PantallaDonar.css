@@ -1,10 +1,25 @@
-
+.pantalla-donar-container{
+  display: flex;
+  flex-direction: row;
+}
+.pantalla-donar{
+  flex: 4;
+}
+.formulario-donar{
+  flex: 1;
+}
+.img-banner{
+  width: 100%;
+  height: 300px;
+  object-fit: none;
+  box-shadow: 5px 0px 10px black;
+}
 /* Estilos para el formulario de donación */
 .formulario-donar {
-  background-color: #f5f5f5;
+  background-color: #9e9e9e;
   padding: 20px;
-  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 84px);
 }
 
 .formulario-donar h2 {
@@ -28,18 +43,8 @@
   font-weight: bold;
 }
 
-.formulario-donar input[type="text"],
-.formulario-donar input[type="email"],
-.formulario-donar input[type="number"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-top: 5px;
-}
-
 .formulario-donar button {
-  background-color: #77aa77;
+  background-color: #337033;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -50,5 +55,10 @@
 }
 
 .formulario-donar button:hover {
-  background-color: #558855;
+  background-color: #1e4b1e;
+}
+
+
+.contenido{
+  margin: 1rem 3rem;
 }

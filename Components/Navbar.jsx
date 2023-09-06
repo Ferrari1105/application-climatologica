@@ -11,7 +11,9 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className="logo">EcoQuest</div>
+      <Link to={'/Home'} className='logo'>
+        EcoQuest
+      </Link>
 
       <div className="create-profile-button">
         <Link to="/Perfil" className='Perfil'>

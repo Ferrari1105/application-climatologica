@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Formulario.css';
 import { Link } from 'react-router-dom';
+import { Form, Button } from 'react-bootstrap'; // Importa los componentes de React Bootstrap
 
 function Formulario() {
   const [formData, setFormData] = useState({
@@ -26,63 +27,35 @@ function Formulario() {
   };
 
   return (
-    <div className="Formulario">
+    <div className='form-container'>
+<div className="Formulario">
       <h1>Formulario Interactivo</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="nombre">Nombre:</label>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            value={formData.nombre}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="edad">Edad:</label>
-          <input
-            type="number"
-            id="edad"
-            name="edad"
-            value={formData.edad}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Correo Electrónico:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
+      <Form>
+      <Form.Group className="mb-3">
+        <Form.Label>Nombre</Form.Label>
+        <Form.Control type="text" placeholder="Nombre" />
+      </Form.Group>
 
-        <div className="form-group sexo">
-          <label htmlFor="genero">Género:</label>
-          <select
-            id="genero"
-            name="genero"
-            value={formData.genero}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Selecciona tu género</option>
-            <option value="Masculino">Masculino</option>
-            <option value="Femenino">Femenino</option>
-            <option value="Otro">Otro</option>
-          </select>
-        </div>
+      <Form.Group className="mb-3">
+        <Form.Label>Apellido</Form.Label>
+        <Form.Control type="text" placeholder="Apellido" />
+      </Form.Group>
 
-        <Link to="/Preguntas">
-          <button type="submit">Siguiente</button>
+      <Form.Group className="mb-3">
+        <Form.Label>Email</Form.Label>
+        <Form.Control type="text" placeholder="Email" />
+      </Form.Group>
+
+      <Form.Group className="mb-3">
+        <Form.Label>Contraseña</Form.Label>
+        <Form.Control type="password" placeholder="Contraseña" />
+      </Form.Group>
+
+      <Link to="/Preguntas">
+      <Button variant="primary" type="submit"> Siguiente </Button>
         </Link>
-      </form>
+    </Form>
+    </div>
     </div>
   );
 }
