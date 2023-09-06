@@ -10,3 +10,33 @@ h1{
     padding: 1rem;
     
   }
+  .fotoDePerfil{
+    width: 15% !important;
+    height: 15%;
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    border-radius: 30%;
+    margin-left: 400px;
+    flex: none !important;
+  }
+  .bannerPerfil{
+    background-color: rgba(0, 128, 0, 0.7);
+    width: none !important;
+  }
+  .cardsPerfil{
+    justify-content: space-around;
+    padding: 40px;
+    font-size: 20px;
+  }
+  .progressBar{
+      height: 10px;
+      width: 200%;
+      align-self: center;
+      background-color: green;
+      border: 2px solid green;
+      margin-top: 0;
+      transition: all .2s ease-in;
+      --bs-progress-bg: rgba(190, 233, 190, 0.9) !important;
+      --bs-progress-bar-bg: rgb(0, 173, 0) !important;
+  }
