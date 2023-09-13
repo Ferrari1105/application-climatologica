@@ -1,40 +1,35 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import { createBrowserRouter, RouterProvider} from 'react-router-dom' 
-import Home from './Home.jsx'
-import Formulario from './Formulario.jsx'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Routes, Outlet } from 'react-router-dom'; // Importa BrowserRouter y Routes
+
+import App from './App.jsx';
+import Home from './Home.jsx';
+import Formulario from './Formulario.jsx';
 import Perfil from './Perfil.jsx';
 import Preguntas from './Preguntas.jsx';
-import Donar from  './Donar.jsx'
+import Donar from './Donar.jsx';
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './index.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 
-
-const routes = createBrowserRouter([{
-  path: "/",
-  element: <App />
-},{
-  path: "/Formulario",
-  element: <Formulario />
-},{
-  path: "/Home",
-  element: <Home />
-},{
-  path: "/Perfil",
-  element: <Perfil />
-},{
-  path: "/Preguntas",
-  element: <Preguntas/>
-},{
-  path: "/Donar",
-  element: <Donar/>
-}])
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
-    <RouterProvider router={routes}/>
-  </React.StrictMode>,
-)
+    <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+            <Route index element={<Home />} />
+            <Route path="/Formulario" element={<Formulario />} />
+            <Route path="/Perfil" element={<Perfil />} />
+            <Route path="/Preguntas" element={<Preguntas />} />
+            <Route path="/Donar" element={<Donar />} />
+            <Route path="*" element={<h1>Not Found</h1>} />
+        </Routes>
+      </BrowserRouter>
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+//reportWebVitals();
