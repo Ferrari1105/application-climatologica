@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Routes, Outlet } from 'react-router-dom'; // Importa BrowserRouter y Routes
+import { BrowserRouter, Route, Routes} from 'react-router-dom'; // Importa BrowserRouter y Routes
 
 import App from './App.jsx';
 import Home from './Home.jsx';
@@ -8,13 +8,14 @@ import Formulario from './Formulario.jsx';
 import Perfil from './Perfil.jsx';
 import Preguntas from './Preguntas.jsx';
 import Donar from './Donar.jsx';
-
+import { UsuarioProvider } from '../context/usuarioContext.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+      <UsuarioProvider>
     <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />} />
@@ -26,6 +27,7 @@ root.render(
             <Route path="*" element={<h1>Not Found</h1>} />
         </Routes>
       </BrowserRouter>
+    </UsuarioProvider>
   </React.StrictMode>
 );
 
