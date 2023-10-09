@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap'; // Importa los componentes de React Bootstrap
 import Navbar from '../Components/Navbar.jsx'
 import { UsuarioContext } from './../Context/usuarioContext'
+import { useContext } from 'react';
 
 function Formulario() {
   const { usuarioG, setUsuarioG } = useContext(UsuarioContext);
@@ -12,6 +13,9 @@ function Formulario() {
     apellido: '',
     edad: '',
     email: '',// Cambiamos el valor por defecto a una cadena vacía
+    nivel: 0,
+    descripcion:'Cosas sobre vos',
+    actividadesRecientes: [{actividad:'actividad: A'},{actividad:'actividad: B'},{actividad:'actividad: C'},] 
   });
 
   const handleChange = (e) => {
@@ -20,13 +24,9 @@ function Formulario() {
       ...formData,
       [name]: value,
     });
-    console.log(formData)
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    // Aquí puedes hacer algo con los datos del formulario, como enviarlos a un servidor.
-    console.log(formData);
     setUsuarioG(formData)
     localStorage.setItem('usuario', JSON.stringify(formData))
   };
@@ -39,7 +39,7 @@ function Formulario() {
       <div className='tituloForm'>
       <h1>Formulario Interactivo</h1>
       </div>
-      <Form onSubmit={handleSubmit}>
+      <Form >
       <Form.Group className="mb-3">
         <Form.Label>Nombre:</Form.Label>
         <Form.Control type="text" name='nombre' placeholder="Nombre" onChange={handleChange} />
@@ -64,8 +64,8 @@ function Formulario() {
         <Form.Control type="password" placeholder="Contraseña" />
       </Form.Group>
 
-      <Link to="/Preguntas">
-      <Button variant="primary" type="submit"> Siguiente </Button>
+      <Link to="/Preguntas" >
+      <Button variant="primary" type="submit"onClick={handleSubmit}> Siguiente </Button>
         </Link>
     </Form>
     </div>
