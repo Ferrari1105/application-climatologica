@@ -5,7 +5,10 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useState } from 'react';
 import { Modal } from 'react-bootstrap';
+import { UsuarioContext } from './../Context/usuarioContext'
+import { useContext } from 'react';
 function Home() {
+  const { usuarioG, setUsuarioG } = useContext(UsuarioContext);
   const [showModal1, setShowModal1] = useState(false);
   const [showModal2, setShowModal2] = useState(false);
   const [showModal3, setShowModal3] = useState(false);

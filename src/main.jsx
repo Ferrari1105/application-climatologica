@@ -15,19 +15,20 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-      <UsuarioProvider>
     <BrowserRouter>
+      <UsuarioProvider>
         <Routes>
           <Route path="/" element={<App />} />
-            <Route index element={<Home />} />
+            <Route index element={<App />} />
+            <Route path="/Home" element={<Home />} />
             <Route path="/Formulario" element={<Formulario />} />
             <Route path="/Perfil" element={<Perfil />} />
             <Route path="/Preguntas" element={<Preguntas />} />
             <Route path="/Donar" element={<Donar />} />
             <Route path="*" element={<h1>Not Found</h1>} />
         </Routes>
-      </BrowserRouter>
     </UsuarioProvider>
+      </BrowserRouter>
   </React.StrictMode>
 );
 

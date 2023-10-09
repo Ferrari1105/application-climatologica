@@ -8,7 +8,10 @@ import { ProgressBar } from 'react-bootstrap'
 
 function Perfil() {
   const progressbar = 60;
-
+ const CerrarSesion = ()=>
+ {
+  localStorage.removeItem("usuario")
+ } 
   return (
     
   <>
@@ -64,7 +67,9 @@ function Perfil() {
         <Button variant="dark">Editar</Button>
       </Card.Body>
     </Card>
-    
+    <Link to="/Home" onClick={CerrarSesion}>
+      <Button>Cerrar Sesion</Button>
+    </Link>
         </div>
 
       
