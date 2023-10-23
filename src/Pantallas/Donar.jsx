@@ -1,5 +1,5 @@
 import React from 'react';
-import './PantallaDonar.css'; // Asegúrate de importar tus estilos CSS
+import '../Css/PantallaDonar.css'; // Asegúrate de importar tus estilos CSS
 import Navbar from '../Components/Navbar';
 import { Form, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';

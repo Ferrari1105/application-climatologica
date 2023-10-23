@@ -1,4 +1,4 @@
-import './App.css'
+import '../Css/App.css'
 import React, { Fragment } from "react"
 import Navbar from '../Components/Navbar.jsx'
 import { Link } from 'react-router-dom'

@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Routes} from 'react-router-dom'; // Importa BrowserRouter y Routes
 
-import App from './App.jsx';
-import Home from './Home.jsx';
-import Formulario from './Formulario.jsx';
-import Perfil from './Perfil.jsx';
-import Preguntas from './Preguntas.jsx';
-import Donar from './Donar.jsx';
-import { UsuarioProvider } from '../context/usuarioContext.jsx';
+import App from './Pantallas/App.jsx';
+import Home from './Pantallas/Home.jsx';
+import Formulario from './Pantallas/Formulario.jsx';
+import Perfil from './Pantallas/Perfil.jsx';
+import Preguntas from './Pantallas/Preguntas.jsx';
+import Donar from './Pantallas/Donar.jsx';
+import { UsuarioProvider } from './context/usuarioContext.jsx';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 

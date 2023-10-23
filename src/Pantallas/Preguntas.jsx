@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Preguntas.css';
+import '../Css/Preguntas.css';
 import { Link } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap'; // Importa los componentes de React Bootstrap
 import Navbar from '../Components/Navbar.jsx'

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './Formulario.css';
+import '../Css/Formulario.css';
 import { Link } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap'; // Importa los componentes de React Bootstrap
 import Navbar from '../Components/Navbar.jsx'
-import { UsuarioContext } from './../Context/usuarioContext'
+import { UsuarioContext } from '../Context/usuarioContext'
 import { useContext } from 'react';
 
 function Formulario() {

@@ -1,11 +1,11 @@
 import React from 'react';
-import './Perfil.css';
+import '../Css/Perfil.css';
 import Navbar from '../Components/Navbar';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { ProgressBar } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
-import { UsuarioContext } from './../Context/usuarioContext'
+import { UsuarioContext } from '../Context/usuarioContext'
 import { useContext } from 'react';
 function Perfil() {
   const { usuarioG, setUsuarioG } = useContext(UsuarioContext);
